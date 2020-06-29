@@ -1,0 +1,159 @@
+{% extends 'header_footer.html' %}
+
+{% block content %}
+
+<section id="contact"> 
+
+                <div class="image-box">
+                        <div class="image-box-bg"> </div>
+                        <div class="image-box-overlay"> </div> <br><br><br>
+                        <div class="image-box-content scroll">
+                            <div class="container text-white first-scroll">
+                              <div class="row text-center p-2 ">
+                                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-2 text-center m-auto">
+
+                                 {% if predicted_price %} 
+                                 <p class="text-white font-weight-bold mt-5">User Inputs </p>   <br>                                 
+
+                                 <div class="rounded">                                   
+
+                                     <form action="predict"  class="bg-black p-5">
+                                           {% csrf_token %}
+                                           <div class="form-group d-flex justify-content-between">  
+                                               <label for="" class="w-25 align-self-center text-left ">Brand</label>                                                  
+                                               <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.brand  }}"  />
+                                           </div>
+                                           <div class="form-group d-flex justify-content-between">
+                                                <label for="" class="w-25 align-self-center text-left ">Body</label>                                                    
+                                                   <input  class="form-control bg-black text-white w-75" value=" {{  user_input_dict.body  }}" />
+                                           </div>
+                                           <div class="form-group d-flex justify-content-between">
+                                                <label for="" class="w-25 align-self-center text-left ">Mileage</label>                                                    
+                                                <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.mileage  }}" />
+                                           </div>
+                                           <div class="form-group d-flex justify-content-between">
+                                               <label for="" class="w-25 align-self-center text-left ">Engine</label>                                                    
+                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.engine_type  }}" />
+                                           </div>
+                                           <div class="form-group d-flex justify-content-between">
+                                                <label for="" class="w-25 align-self-center text-left ">Reg </label>                                                    
+                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.registration  }}" />
+                                           </div>
+                                           <div class="form-group d-flex justify-content-between justify-content-between">
+                                                <label for="" class="w-25 align-self-center text-left "> Year</label>                                                    
+                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.year  }}"  />
+                                           </div>
+                                           <div class="form-group d-flex justify-content-between">
+                                                <label for="" class="w-25 align-self-center text-left ">Model </label>                                                    
+                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.model  }}"  />
+                                           </div>
+                                           
+                                     </form>
+                                     <p class="text-white font-weight-bold my-5">The predicted price of the car </p>  
+                                     
+                                
+                                     <div class="rounded bg-primary p-2 mb-5">        
+                                         <p class="text-white">  <strong> ${{ predicted_price }} </strong> </p>                
+                                     </div>
+                                   
+
+                                 </div> 
+                                     
+                                 {% else %}
+
+                                 
+                                  <h2 class="text-white font-weight-bold">Predict Car Price</h2>   <br>    
+                                  <div class="rounded">                                   
+
+                                      <form action="predict"  method='post' class="">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                
+                                                <select class="form-control bg-black text-white" name="brand" id="" required>
+                                                        <option class="bg-dark text-white" value="disabled">Select car type</option>
+                                                        <option class="bg-dark text-white" value="BMW">BMW</option>
+                                                        <option class="bg-dark text-white"  value="Mercedes-Benz">Mercedes-Benz</option>
+                                                        <option class="bg-dark text-white" value="Audi">Audi</option>
+                                                        <option class="bg-dark text-white" value="Toyota">Toyota</option>
+                                                        <option class="bg-dark text-white" value="Renault">Renault</option>
+                                                        <option class="bg-dark text-white" value="Volkswagen">Volkswagen</option>
+                                                        <option class="bg-dark text-white" value="Mitsubishi">Mitsubishi</option>
+                                                </select>
+                                            </div>                            
+                                            <input type='hidden' name='price' value="1"/>                             
+                                            <div class="form-group">
+                                                    <!-- <label for="" class="w-25">Body</label> -->
+                                                    <select class="form-control bg-black text-white border" name="body" id="" required>
+                                                            <option class="bg-dark text-white" value="disabled">Select body</option>
+                                                            <option class="bg-dark text-white" value="van">Van</option>
+                                                            <option class="bg-dark text-white" value="sedan">Sedan</option>
+                                                            <option class="bg-dark text-white" value="crossover">Crossover</option>
+                                                            <option class="bg-dark text-white" value="vagon">vagon</option>
+                                                            <option class="bg-dark text-white" value="hatch">hatch</option>
+                                                            <option class="bg-dark text-white" value="other">other</option>                     
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                 
+                                                    <input type='number' class="form-control bg-black text-white border" name='mileage' placeholder='Mileage' required='required'/>
+                                            </div>                            
+                                            <input type="hidden" name='engineV' value="1" />                            
+                                            <div class="form-group">
+                                                    
+                                                    <select class="form-control bg-black text-white" name="engine_type" id="" required>
+                                                            <option class="bg-dark text-white" value="disabled">Select Engine type</option>
+                                                            <option class="bg-dark text-white" value="Petrol">Petrol</option>
+                                                            <option class="bg-dark text-white" value="Diesel">Diesel</option>
+                                                            <option class="bg-dark text-white" value="Gas">Gas</option>
+                                                            <option class="bg-dark text-white" value="Other">Other</option>                                          
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                   
+                                                    <select class="form-control bg-black text-white border" name="registration" id="" required>
+                                                            <option class="bg-dark text-white" value="disabled">Select registration status</option>
+                                                            <option class="bg-dark text-white" value="yes">Yes</option>
+                                                            <option class="bg-dark text-white" value="no">No</option>                                                                
+                                                    </select> 
+                                            </div>    
+                                            <div class="form-group">
+                                                    
+                                                    <input type='number' class="form-control bg-black text-white border" name='year' placeholder='Year eg 2010, 1999 ' required='required'/>
+                                            </div>
+                                            <div class="form-group">
+                                                                                           
+                                                    <input type='text' class="form-control bg-black text-white border" name='model' placeholder='Model eg C-Class, corolla' /> 
+                                            </div> 
+                                                
+                                            <div class="form-group">
+                                               
+                                                <button type="submit" class="btn btn-primary">Predict car price</button>
+                                            </div>
+                                      </form> 
+                                    
+
+                                  </div>                                  
+                                 {% endif %}    
+                                                                                       
+                    
+                                  
+                                </div>
+
+                              </div>
+                                
+                            </div>
+                       
+                            
+
+                        </div>
+                </div>
+
+</section>
+
+{% endblock %}
+
+       
+        
+
+    
+       

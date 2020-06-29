@@ -1,0 +1,46 @@
+Brand,Price,Body,Mileage,EngineV,Engine Type,Registration,Year,Model
+Mercedes-Benz,7900.0,van,427,2.9,Diesel,yes,1999,Sprinter 212
+Mercedes-Benz,63000.0,crossover,86,5.5,Petrol,yes,2009,G 55 AMG
+Mitsubishi,7500.0,sedan,195,1.6,Gas,yes,2007,Lancer
+BMW,6350.0,crossover,156,4.4,Gas,no,2002,X5
+Mercedes-Benz,31600.0,sedan,33,1.6,Petrol,yes,2013,CLA 200
+Volkswagen,20300.0,other,30,1.4,Petrol,yes,2013,Scirocco
+Mercedes-Benz,35500.0,other,99,2.99,Diesel,yes,2011,E-Class
+Mercedes-Benz,17900.0,sedan,190,3.0,Diesel,yes,2007,E-Class
+Volkswagen,7500.0,sedan,240,1.8,Petrol,yes,2002,Passat B5
+Mercedes-Benz,24900.0,sedan,140,5.5,Petrol,yes,2009,S 550
+Mercedes-Benz,7500.0,sedan,319,3.2,Gas,yes,1997,S 320
+BMW,36900.0,sedan,17,2.0,Petrol,yes,2013,520
+Toyota,21500.0,crossover,135,2.0,Gas,yes,2007,Land Cruiser Prado
+BMW,13000.0,sedan,193,3.6,Petrol,yes,2003,735
+Toyota,18999.0,crossover,95,2.0,Petrol,yes,2011,Rav 4
+Mitsubishi,7000.0,sedan,180,1.6,Gas,yes,2004,Lancer
+Toyota,18990.0,crossover,95,2.0,Petrol,yes,2011,Rav 4
+Renault,6200.0,sedan,246,1.4,Petrol,yes,2005,Megane
+Toyota,,sedan,24,2.5,Petrol,yes,2015,Camry
+Mercedes-Benz,2200.0,sedan,168,2.0,Petrol,no,1994,E-Class
+Volkswagen,16950.0,sedan,38,2.0,Diesel,yes,2014,Jetta
+Volkswagen,10200.0,sedan,280,1.8,Petrol,yes,2006,Passat B5
+Audi,41000.0,crossover,88,4.2,Diesel,yes,2010,Q7
+BMW,14000.0,crossover,240,4.4,Gas,yes,2002,X5
+BMW,33500.0,sedan,65,2.0,Petrol,yes,2013,520
+Renault,5100.0,vagon,156,1.5,Diesel,yes,2006,Kangoo
+BMW,29500.0,sedan,850,,Petrol,yes,2011,523
+Audi,24300.0,sedan,43,1.8,Petrol,yes,2012,A4
+Renault,6800.0,sedan,219,1.6,Gas,yes,2007,Megane
+Audi,72000.0,sedan,55,6.3,Petrol,yes,2012,A8
+Mercedes-Benz,13200.0,van,217,3.7,Gas,yes,2005,Viano
+Volkswagen,6900.0,sedan,160,1.6,Petrol,yes,2003,Bora
+Toyota,13200.0,sedan,38,1.33,Petrol,yes,2014,Corolla
+Mitsubishi,6300.0,crossover,235,3.2,Diesel,no,2001,Pajero
+Volkswagen,3250.0,sedan,255,1.9,Diesel,no,2003,Passat B5
+BMW,8200.0,sedan,238,3.0,Diesel,no,2004,730
+Volkswagen,13972.07,sedan,0,1.6,Petrol,yes,2016,Polo
+Toyota,12700.0,sedan,130,2.4,Petrol,yes,2008,Camry
+Volkswagen,10600.0,other,140,2.0,Other,yes,2007,Passat B6
+BMW,15200.0,sedan,227,2.5,Petrol,yes,2008,525
+Audi,3800.0,sedan,257,2.0,Petrol,yes,1993,80
+Volkswagen,17900.0,crossover,145,3.0,Diesel,yes,2007,Touareg
+Toyota,19500.0,crossover,150,4.0,Petrol,yes,2005,Land Cruiser Prado
+Volkswagen,3100.0,hatch,118,1.8,Gas,yes,1993,Golf III
+BMW,23500.0,crossover,180,4.8,Petrol,yes,2008,X5

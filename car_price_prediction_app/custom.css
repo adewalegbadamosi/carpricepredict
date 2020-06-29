@@ -1,0 +1,85 @@
+
+/*  This is the customized css for the car price application    */
+
+
+            body{
+                position: relative;
+                background-color: #eee;
+                padding: 20px;
+                background: url('./images/car.png')
+            }
+            div h1{
+                background-color: rgb(255, 252, 51);
+                width: 80%;
+                margin:  auto ;
+                padding: 10px ;
+                border-top: 10px;
+                border: 1px solid rgb(255, 251, 9);
+            }
+            select{
+                display: block;
+                margin : 10px auto;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 5px;
+                background: transparent;
+                color: black;
+                width: 25%;
+            }
+           
+            h1{
+                text-align: center;
+                margin: 20px
+            }
+            .form-div{
+                background-color: rgb(219, 219, 219);
+                width: 80%;
+                margin:  auto ;
+                padding: 10px ;
+                border-top: 10px;
+                border: 1px solid rgb(85, 236, 123)
+            }
+            form{
+                margin:  auto ;
+                margin-top: 50px;
+                margin-bottom: 25px;
+
+            }
+            input{
+                display: block;
+                margin : 10px auto;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 5px;
+                background: transparent;
+                color: black;
+                width: 25%;
+            }
+            #submit{                
+                margin : 15px auto;
+                text-align: center;
+                padding: 5px;
+                
+            }
+            #submit button{
+                background-color: blue;
+                padding: 5px;
+                border-radius: 4px;
+                text-decoration: none;
+                border: none;
+                width:15%;
+                font-weight: bold
+            }
+            .output{
+                
+                background-color: rgb(85, 236, 123);
+                width: 80%;
+                margin:  auto ;
+                padding: 10px ;
+                border-top: 10px ;
+                text-align: center;
+                border: 1px solid rgb(85, 236, 123)
+            } 
+            
+     
+
