@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY_CAR_PRICE_PREDICTION')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -129,6 +129,6 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
 # extra places for collectstatic to find static file
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'))
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
 
 django_heroku.settings(locals())
