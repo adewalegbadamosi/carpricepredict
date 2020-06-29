@@ -60,21 +60,21 @@ It's also at the bottom-most position in our "div stack" (z-index 1)
 
 */
 
-.image-box-bg{
+/* .image-box-bg{
     background: url('./static/images/car.png') center center no-repeat ;
     background-size: cover;
-    z-index: 1
-}
+    z-index: 1 
+} */
 
 /*
 The overlay div is just a colored element with some opacity.
 It's above the background image in our stack, so it appears to
 darken the image
 */
-.image-box-overlay{
+/* .image-box-overlay{
 background: rgba(0, 0, 0, 0.8);
 z-index: 2;
-}
+} */
 
 /*
 The content div is at the top of our stack.
