@@ -13,51 +13,51 @@
                                 <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-2 text-center m-auto">
 
                                  {% if predicted_price %} 
-                                 <p class="text-white font-weight-bold mt-5">User Inputs </p>   <br>                                 
+                                                                   
+                                <div class="w-90 m-auto">
+                                        <div class="rounded bg-primary mt-5 p-2">        
+                                                <p class="text-white align-self">Predicted price of the car: <strong> ${{ predicted_price }} </strong> </p>                
+                                        </div>                                     
+                                                        
 
-                                 <div class="rounded">                                   
+                                        <div class="rounded">                                   
 
-                                     <form action="predict"  class="bg-black p-5">
-                                           {% csrf_token %}
-                                           <div class="form-group d-flex justify-content-between">  
-                                               <label for="" class="w-25 align-self-center text-left ">Brand</label>                                                  
-                                               <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.brand  }}"  />
-                                           </div>
-                                           <div class="form-group d-flex justify-content-between">
-                                                <label for="" class="w-25 align-self-center text-left ">Body</label>                                                    
-                                                   <input  class="form-control bg-black text-white w-75" value=" {{  user_input_dict.body  }}" />
-                                           </div>
-                                           <div class="form-group d-flex justify-content-between">
-                                                <label for="" class="w-25 align-self-center text-left ">Mileage</label>                                                    
-                                                <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.mileage  }}" />
-                                           </div>
-                                           <div class="form-group d-flex justify-content-between">
-                                               <label for="" class="w-25 align-self-center text-left ">Engine</label>                                                    
-                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.engine_type  }}" />
-                                           </div>
-                                           <div class="form-group d-flex justify-content-between">
-                                                <label for="" class="w-25 align-self-center text-left ">Reg </label>                                                    
-                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.registration  }}" />
-                                           </div>
-                                           <div class="form-group d-flex justify-content-between justify-content-between">
-                                                <label for="" class="w-25 align-self-center text-left "> Year</label>                                                    
-                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.year  }}"  />
-                                           </div>
-                                           <div class="form-group d-flex justify-content-between">
-                                                <label for="" class="w-25 align-self-center text-left ">Model </label>                                                    
-                                                   <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.model  }}"  />
-                                           </div>
-                                           
-                                     </form>
-                                     <p class="text-white font-weight-bold my-5">The predicted price of the car </p>  
-                                     
-                                
-                                     <div class="rounded bg-primary p-2 mb-5">        
-                                         <p class="text-white">  <strong> ${{ predicted_price }} </strong> </p>                
-                                     </div>
-                                   
+                                        <form action="predict"  class="bg-black p-5 mb-3">
+                                                {% csrf_token %}
+                                                <div class="form-group d-flex justify-content-between">  
+                                                <label for="" class="w-25 align-self-center text-left ">Brand</label>                                                  
+                                                <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.brand  }}"  />
+                                                </div>
+                                                <div class="form-group d-flex justify-content-between">
+                                                        <label for="" class="w-25 align-self-center text-left ">Body</label>                                                    
+                                                        <input  class="form-control bg-black text-white w-75" value=" {{  user_input_dict.body  }}" />
+                                                </div>
+                                                <div class="form-group d-flex justify-content-between">
+                                                        <label for="" class="w-25 align-self-center text-left ">Mileage</label>                                                    
+                                                        <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.mileage  }}" />
+                                                </div>
+                                                <div class="form-group d-flex justify-content-between">
+                                                <label for="" class="w-25 align-self-center text-left ">Engine</label>                                                    
+                                                        <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.engine_type  }}" />
+                                                </div>
+                                                <div class="form-group d-flex justify-content-between">
+                                                        <label for="" class="w-25 align-self-center text-left ">Reg </label>                                                    
+                                                        <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.registration  }}" />
+                                                </div>
+                                                <div class="form-group d-flex justify-content-between justify-content-between">
+                                                        <label for="" class="w-25 align-self-center text-left "> Year</label>                                                    
+                                                        <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.year  }}"  />
+                                                </div>
+                                                <div class="form-group d-flex justify-content-between">
+                                                        <label for="" class="w-25 align-self-center text-left ">Model </label>                                                    
+                                                        <input  class="form-control bg-black text-white w-75" value=" {{ user_input_dict.model  }}"  />
+                                                </div>
+                                                
+                                        </form>                          
 
-                                 </div> 
+                                        </div>      
+                                </div>
+                                 
                                      
                                  {% else %}
 
@@ -65,7 +65,7 @@
                                   <h2 class="text-white font-weight-bold">Predict Car Price</h2>   <br>    
                                   <div class="rounded">                                   
 
-                                      <form action="predict"  method='post' class="">
+                                      <form action="predict"  method='post' class="w-75 m-auto">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 
@@ -129,8 +129,7 @@
                                                
                                                 <button type="submit" class="btn btn-primary">Predict car price</button>
                                             </div>
-                                      </form> 
-                                    
+                                      </form>                                    
 
                                   </div>                                  
                                  {% endif %}    
