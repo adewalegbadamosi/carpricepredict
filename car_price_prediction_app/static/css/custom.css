@@ -84,7 +84,7 @@ to place the content appropriately
 position: relative;
 z-index: 3;
 /* Finally, style and place the content */
-min-height: 100vh;
+min-height: 90vh;
 display: flex;
 flex-direction: column;
 align-items: center;
