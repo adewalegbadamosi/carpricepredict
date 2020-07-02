@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY_CAR_PRICE_PREDICTION')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
